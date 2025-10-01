@@ -4,10 +4,13 @@
 python -m venv env
 ```
 ```bash
-cd .\.venv\Scripts\
+cd env\Scripts\
 ```
 ```bash
 \activate
+```
+```bash
+pip install -r .\Requirements.txt
 ```
 ```bash
 uvicorn app.main:app --reload --reload-dir app --port 5003
