@@ -302,7 +302,7 @@ def _decorate_list(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 def _now_local_str() -> str:
   """Retorna o horário local do servidor, sem conversão/offset."""
-  return datetime.now().strftime("%d/%m/%y %H:%M:%S")
+  return datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
 # Normalização de strings para comparação "sem acento" e case-insensitive
 def _norm(s: str) -> str:
