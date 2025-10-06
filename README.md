@@ -85,4 +85,4 @@ pip3 install -r Requirements.txt
 ```bash
  pm2 start ./env/bin/python --name MAV_API_COLLECTOR(VERSÃO) --cwd /home/ghrunner/actions-runner/_work/MetasysAlarmViewer/02_MS_API_COLLECTOR_V3 --interpreter none --  -m uvicorn app.main:app --host 0.0.0.0 --port 500(VERSÃO)
 
-uvicorn app.main:app  --port 5003
+uvicorn app.main:app  --port 5002
