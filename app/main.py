@@ -245,6 +245,8 @@ VALUE_MAP: Dict[str, str] = {
   "controllerStatusEnumSet.csOnline": "Online",
   "controllerStatusEnumSet.csOffline": "Offline",
   "batteryConditionEnumSet.bcBatteryService": "Battery Service",
+  "batteryConditionEnumSet.bcBatteryDefective": "Battery Defective",
+  "batteryConditionEnumSet.bcBatteryGood": "Battery Good",
   "binarypvEnumSet.bacbinActive": "Active",
   "binarypvEnumSet.bacbinInactive": "Inactivate",
   "jciSystemStatusEnumSet.onboardUploadInProgress": "Uploading in progress",
@@ -270,6 +272,9 @@ TYPE_MAP: Dict[str, str] = {
   "alarmValueEnumSet.avOffline": "Offline",
   "alarmValueEnumSet.avOnline": "Online",
   "alarmValueEnumSet.avUnreliable": "Unreliable",
+  "alarmValueEnumSet.avLoWarn": "Low Warn",
+  "alarmValueEnumSet.avHiWarn": "High Warn",
+  "alarmValueEnumSet.avFault": "Fault",
 }
 
 # ---------------------------------------------------------
