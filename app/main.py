@@ -230,7 +230,7 @@ UNITS_MAP: Dict[Optional[str], str] = {
   "sabControllerStatusEnumSet.sabCsOffline": "Offline",
   "sabControllerStatusEnumSet.sabCsOnline": "Online",
   "offAutoEnumSet.1": "1",
-  "unitEnumSet.jaMetersWater":"jaMetersWater"
+  "unitEnumSet.jaMetersWater":"mH₂O"
 }
 
 VALUE_MAP: Dict[str, str] = {
