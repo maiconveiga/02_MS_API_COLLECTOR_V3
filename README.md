@@ -1,6 +1,8 @@
 # Metasys Alarm Viewer (MAV)
 
 ## 📌 Sobre a aplicação
+
+**Atualizacao do Collector (V4_5_6):** para Metasys REST API v6, a coleta de alarmes foi migrada do endpoint `.../alarms` para `.../activities` usando `activityType=alarm` e autenticacao via `Authorization: Bearer <token>`.
 O **Metasys Alarm Viewer (MAV)** é uma aplicação **frontend em React + TypeScript** projetada para ambientes **on-premise**.  
 O objetivo é **centralizar a visualização de alarmes** de múltiplos servidores **ADX/ADS (versão 10 ou superior)** com API habilitada.
 
@@ -56,7 +58,7 @@ src/
 ## Levantar servidores
 ## Front
 ```bash
-pm2 start "npm run dev -- --host 0.0.0.0 --port 5173" --name MAV
+pm2 start npm --name FRONTEND -- run dev -- --host 0.0.0.0 --port 80
 ```
 ## Back - API Manager
 ```bash
@@ -72,7 +74,7 @@ pip3 install -r requirements.txt
 pm2 start ./env_API_Manager/bin/python --name MAV_API_MANAGER --cwd /home/ghrunner/actions-runner/_work/MetasysAlarmViewer/01_MS_API_MANAGER --interpreter none --  -m uvicorn app.main:app --host 0.0.0.0 --port 5000
 ```
 
-## Back - API Collector V3
+## Back - API Collector V4_5_6
 ```bash
 python3 -m venv env
 ```
@@ -80,9 +82,9 @@ python3 -m venv env
 source env/bin/activate
 ```
 ```bash
-pip3 install -r Requirements.txt
+pip3 install -r requirements.txt
 ```
 ```bash
- pm2 start ./env/bin/python --name MAV_API_COLLECTOR(VERSÃO) --cwd /home/ghrunner/actions-runner/_work/MetasysAlarmViewer/02_MS_API_COLLECTOR_V3 --interpreter none --  -m uvicorn app.main:app --host 0.0.0.0 --port 500(VERSÃO)
+ pm2 start /home/ghrunner/MAV/02_MS_API_COLLECTOR_V3/env/bin/python --name MAV_API_COLLECTOR6 --cwd /home/ghrunner/MAV/02_MS_API_COLLECTOR_V4_5_6 --interpreter none --  -m uvicorn app.main:app --host 0.0.0.0 --port 5006
 
 uvicorn app.main:app  --port 5002
